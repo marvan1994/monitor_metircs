@@ -17,6 +17,8 @@ degree_names = df.class_degree.unique().tolist()
 speaker_names = df.speaker.unique().tolist()
 tariff_names = df.tariff.unique().tolist()
 
+
+st.markdown('### Это первая версия монитора метрик. Здесь используется файл актуальный на октябрь 2022 года. Ждите обновлений 🐱')
 col1, col2, col3, col4, col5 = st.columns(5)
 with col1:
     subject = st.selectbox('Выберите предмет',['Все']+subject_names)
