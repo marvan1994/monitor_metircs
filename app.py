@@ -2,8 +2,12 @@ import pandas as pd
 import streamlit as st
 st.set_page_config(layout="wide")
 
+@st.cache  # 👈 Added this
+def upload_data():
+    df = pd.read_csv('monitor.csv', dtype=object)
+    return df
 
-df = pd.read_csv('monitor.csv', dtype=object)
+df = upload_data()
 
 def query_string(subject, degree, speaker, tariff, packet):
     var_names = ['subject','class_degree','speaker','tariff', 'is_pack']
