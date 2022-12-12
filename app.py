@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+
 st.set_page_config(layout="wide")
 
 @st.cache  # 👈 Added this
@@ -77,7 +78,7 @@ with col5:
 
 with st.expander('Посмотреть графики'):
     st.markdown('Раздел находится в разработке')
-    st.bar_chart(data=dft['count_done_hw'])
+
 
 
 
